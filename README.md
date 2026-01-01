@@ -1,7 +1,7 @@
-# Snowfart Config
+# icefort Config
 
-[![CI](https://github.com/snowfart-ai/config/actions/workflows/ci.yml/badge.svg)](https://github.com/snowfart-ai/config/actions/workflows/ci.yml)
-[![npm version](https://badge.fury.io/js/@snowfart%2Fconfig.svg)](https://badge.fury.io/js/@snowfart%2Fconfig)
+[![CI](https://github.com/icefort-ai/config/actions/workflows/ci.yml/badge.svg)](https://github.com/icefort-ai/config/actions/workflows/ci.yml)
+[![npm version](https://badge.fury.io/js/@icefort%2Fconfig.svg)](https://badge.fury.io/js/@icefort%2Fconfig)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Node.js Version](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen.svg)](https://nodejs.org/)
 [![pnpm](https://img.shields.io/badge/maintained%20with-pnpm-cc00ff.svg)](https://pnpm.io/)
@@ -12,11 +12,11 @@ A lightweight, cross-platform utility for reading, displaying, and safely editin
 
 ```bash
 # Launch Web UI (no installation required)
-npx @snowfart/config
+npx @icefort/config
 
 # Or install globally
-npm install -g @snowfart/config
-snowfart-config --help
+npm install -g @icefort/config
+icefort-config --help
 ```
 
 ## ✨ Features
@@ -37,12 +37,12 @@ snowfart-config --help
 
 ```bash
 # Launch Web UI (default)
-npx @snowfart/config
-# or: snowfart-config (if installed globally)
+npx @icefort/config
+# or: icefort-config (if installed globally)
 
 # Launch Web UI with custom port
-npx @snowfart/config --port 3000
-# or: snowfart-config --port 3000
+npx @icefort/config --port 3000
+# or: icefort-config --port 3000
 ```
 
 ### Cross-Engine MCP Server Management
@@ -58,16 +58,16 @@ One of the key features is the ability to copy MCP server configurations between
 ### Via npm/npx (Recommended)
 ```bash
 # Install globally
-npm install -g @snowfart/config
+npm install -g @icefort/config
 
 # Or use with npx (no installation required)
-npx @snowfart/config
+npx @icefort/config
 ```
 
 ### From Source
 ```bash
 # Clone the repository
-git clone https://github.com/snowfart-ai/config.git
+git clone https://github.com/icefort-ai/config.git
 cd config
 
 # Install dependencies
@@ -81,19 +81,19 @@ pnpm build
 
 ```bash
 # Default behavior (launches web UI)
-snowfart-config                    # Launch web UI on port 4040
+icefort-config                    # Launch web UI on port 4040
 
 # Web UI options
-snowfart-config --port 3000        # Custom port
-snowfart-config --no-open          # Don't auto-open browser
-snowfart-config --no-update-check  # Disable update notifications
-snowfart-config --config /path     # Custom config path
+icefort-config --port 3000        # Custom port
+icefort-config --no-open          # Don't auto-open browser
+icefort-config --no-update-check  # Disable update notifications
+icefort-config --config /path     # Custom config path
 
 # Subcommand style (also supported)
-snowfart-config web [options]      # Web UI subcommand
+icefort-config web [options]      # Web UI subcommand
 
 # Show help
-snowfart-config --help
+icefort-config --help
 ```
 
 ## 🛠️ Development
@@ -108,10 +108,10 @@ pnpm install
 pnpm build
 
 # Build only core package
-pnpm --filter @snowfart/config-core run build
+pnpm --filter @icefort/config-core run build
 
 # Build only web app (includes server)
-pnpm --filter @snowfart/config-web run build
+pnpm --filter @icefort/config-web run build
 
 # IMPORTANT: Web development uses build-first workflow
 # Start development server (builds frontend + starts server)
@@ -161,7 +161,7 @@ Current adapters: `ClaudeAdapter` (`~/.claude.json`), `CodexAdapter` (`~/.codex/
 
 ## Configuration Schemas & File Formats
 
-snowfart Config supports **3 engine adapters** with comprehensive configuration management:
+icefort Config supports **3 engine adapters** with comprehensive configuration management:
 
 ### 1. Claude Code CLI (`claude-code`)
 
@@ -304,7 +304,7 @@ Same structure as Claude Code:
 4. **Event Broadcasting**: State changes notify the web interface via events
 
 ### Safe Configuration Management
-- **Automatic Backups**: Timestamped `.json` files in `.snowfart-config-backups/`
+- **Automatic Backups**: Timestamped `.json` files in `.icefort-config-backups/`
 - **Schema Validation**: AJV validation (currently permissive to allow unknown fields)
 - **Atomic Operations**: Failed writes never corrupt original files
 - **Deep Merging**: Patch operations preserve unknown configuration fields
